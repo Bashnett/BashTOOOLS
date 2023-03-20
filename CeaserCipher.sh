@@ -1,14 +1,7 @@
 #!/bin/bash
 read -p "Enter Message in Plain Text: " T
 read -p "Enter Key Value: " K
-echo -n "  ____            ____ _       _               
- / ___|___  __ _ / ___(_)_ __ | |__   ___ _ __ 
-| |   / _ \/ _` | |   | | '_ \| '_ \ / _ \ '__|
-| |__|  __/ (_| | |___| | |_) | | | |  __/ |   
- \____\___|\__,_|\____|_| .__/|_| |_|\___|_|   
-                        |_|                    
-                        
-                        "
+figlet CeaCipher
 function Encrypt {
   case $K in 1)echo $T | tr '[A-Z]' '[B-ZA-A]' | tr '[a-z]' '[b-za-a]';;   
         2)echo $T | tr '[A-Z]' '[C-ZA-B]' | tr '[a-z]' '[c-za-b]';;
