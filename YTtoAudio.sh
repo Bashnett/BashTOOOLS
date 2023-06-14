@@ -17,8 +17,8 @@ yt-dlp $u -o $1
 read -p "DO you want to Convert it to Audio or not (yes or no)" q
 case $q in
 	y|Y|yes|YES)
-		read -p "Enter the new name of your file? " n
-		ffmpeg -i $1.webm -vn ${n}.mp3
+		ffmpeg -i $1.webm -vn $1.mp3
+		rm *.webm
 		echo "Thank you for using this Script"
 		;;
 	n|N|no|NO)
